@@ -1,0 +1,3 @@
+[submodule "GloryS.Common"]
+	path = GloryS.Common
+	url = https://github.com/esolCrusador/GloryS.Common.git
