@@ -8,13 +8,19 @@ namespace GloryS.LinqSample.Models
     {
         public int EnrollmentId { get; set; }
         public Grade? Grade { get; set; }
+        public string GradeString { get; set; }
+
         Expression<Func<Enrollment, EnrollmentBaseModel>> ISelectExpression<Enrollment, EnrollmentBaseModel>.GetSelectExpression()
         {
-            return enrollment => new EnrollmentBaseModel
+            Expression<Func<Enrollment, EnrollmentBaseModel>> select = enrollment => new EnrollmentBaseModel
             {
                 EnrollmentId = enrollment.EnrollmentID,
                 Grade = enrollment.Grade,
             };
+
+            select = select.AddMemberInit(e => e.Grade, r => r.GradeString, EnumExpressionExtensions.GetEnumToStringExpression<Grade?>(g => g.ToString()));
+
+            return select;
         }
 
         public override string ToString()
