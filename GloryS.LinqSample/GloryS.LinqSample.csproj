@@ -83,6 +83,7 @@
     <Compile Include="Models\CourseModel.cs" />
     <Compile Include="Models\CourseWithOldStudentsModel.cs" />
     <Compile Include="Models\EnrollmentBaseModel.cs" />
+    <Compile Include="Models\EnrollmentModel.cs" />
     <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

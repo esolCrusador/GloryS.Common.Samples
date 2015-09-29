@@ -27,6 +27,8 @@ namespace GloryS.LinqSample
 
                 HowWeDo(ctx);
 
+                PropertiesMapperExample(ctx);
+
                 SimpleSelect.ShowStudents(ctx);
                 SelectNonCache.ShowStudents(ctx);
                 InitInheritanceExample.ShowCourses(ctx);
@@ -117,6 +119,18 @@ namespace GloryS.LinqSample
             var courseWithStudents = ctx.Courses.ResolveSelectExternal<Course, CourseWithOldStudentsModel>().ToList();
             Console.WriteLine(GetResultsString("Courses with students", courseWithStudents));
         }
+
+        private static void PropertiesMapperExample(SchoolContext ctx)
+        {
+            var enrollments = ctx.Enrollments.ToList();
+
+            var enrollmentModel = Mapper.Map<Enrollment, EnrollmentModel>(enrollments[0]);
+            Console.WriteLine(enrollmentModel);
+
+            var enrollmentModels = enrollments.MapSelect<Enrollment, EnrollmentModel>().ToList();
+            Console.WriteLine(GetResultsString("Enrollments", enrollmentModels));
+        }
+
         static string GetResultsString(string name, IEnumerable<object> results)
         {
             return String.Format(
