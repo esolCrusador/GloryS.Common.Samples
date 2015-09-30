@@ -29,6 +29,7 @@ namespace GloryS.LinqSample
 
                 PropertiesMapperExample(ctx);
 
+                ExpressionsCombinationExample.CombineSelectExpression(ctx);
                 SimpleSelect.ShowStudents(ctx);
                 SelectNonCache.ShowStudents(ctx);
                 InitInheritanceExample.ShowCourses(ctx);
@@ -87,6 +88,15 @@ namespace GloryS.LinqSample
                     {
                         EnrollmentId = enrollment.EnrollmentID,
                         Grade = enrollment.Grade,
+                        GradeString = enrollment.Grade == null
+                            ? null
+                            : enrollment.Grade == Grade.A ? Grade.A.ToString()
+                            : enrollment.Grade == Grade.B ? Grade.B.ToString()
+                            : enrollment.Grade == Grade.C ? Grade.C.ToString()
+                            : enrollment.Grade == Grade.D ? Grade.D.ToString()
+                            : enrollment.Grade == Grade.F ? Grade.F.ToString()
+                            : null,
+
                         Student = new StudentModel
                         {
                             FirstMidName = enrollment.Student.FirstMidName,

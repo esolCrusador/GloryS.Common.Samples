@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllExamples\CultureResolveExample.cs" />
+    <Compile Include="AllExamples\ExpressionsCombinationExample.cs" />
     <Compile Include="AllExamples\FilterExpression.cs" />
     <Compile Include="AllExamples\InitInheritanceExample.cs" />
     <Compile Include="AllExamples\MemberInitExample.cs" />
