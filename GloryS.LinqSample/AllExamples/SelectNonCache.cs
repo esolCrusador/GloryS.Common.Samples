@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using GloryS.LinqSample.DAL;
 using GloryS.LinqSample.DAL.DataEntities;
+using LinqExpressionsMapper;
 
 namespace GloryS.LinqSample.AllExamples
 {
@@ -22,7 +23,7 @@ namespace GloryS.LinqSample.AllExamples
             public int? MinutesAfterEnrollment { get; set; }
         }
 
-        public class StudentModelMapper : ISelectExpressionNonCache<Student, StudentModel>
+        public class StudentModelMapper : ISelectDynamicExpression<Student, StudentModel>
         {
 
             /// <summary>

@@ -12,6 +12,7 @@ using GloryS.LinqSample.AllExamples;
 using GloryS.LinqSample.DAL;
 using GloryS.LinqSample.DAL.DataEntities;
 using GloryS.LinqSample.Models;
+using LinqExpressionsMapper;
 
 namespace GloryS.LinqSample
 {

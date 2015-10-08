@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 using GloryS.LinqSample.DAL.DataEntities;
+using LinqExpressionsMapper;
 
 namespace GloryS.LinqSample.Models
 {

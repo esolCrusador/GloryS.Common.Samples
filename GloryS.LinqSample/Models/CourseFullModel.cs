@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using GloryS.LinqSample.DAL.DataEntities;
+using LinqExpressionsMapper;
 
 namespace GloryS.LinqSample.Models
 {

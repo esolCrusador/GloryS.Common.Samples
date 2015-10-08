@@ -53,6 +53,10 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="LinqExpressionsMapper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=321140b77c1b6047, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqExpressionsMapper.2.0.0\lib\LinqExpressionsMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />

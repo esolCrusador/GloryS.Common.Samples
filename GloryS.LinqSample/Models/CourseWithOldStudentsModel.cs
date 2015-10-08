@@ -4,6 +4,7 @@ using System.Data.Entity.SqlServer;
 using System.Linq;
 using System.Linq.Expressions;
 using GloryS.LinqSample.DAL.DataEntities;
+using LinqExpressionsMapper;
 
 namespace GloryS.LinqSample.Models
 {
